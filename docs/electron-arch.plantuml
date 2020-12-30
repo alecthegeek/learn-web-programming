@@ -1,0 +1,44 @@
+@startuml
+
+actor user
+
+
+rectangle electron {
+    component ["Main Process"] as main
+    collections renderer
+}
+
+component ["Desktop Operating System"] as desktop
+
+
+desktop <--> main : Native APIs
+
+main "1" <--> "*" renderer : IPC
+
+
+renderer <--> user : UX Display
+
+note right of main
+    The Main process manages
+    all web pages
+    and their corresponding
+       Renderer processes
+    1. Only one
+    2. NodeJS
+
+    The Main process creates
+    web pages by creating
+    BrowserWindow instances.
+    Each BrowserWindow instance
+    runs the web page in its
+    Renderer process.
+end note
+
+note right of renderer
+    HTML/CSS/JS-TS/DOM
+    Chromium + Nodejs
+    Displays a web page (single page app)
+    There are one or more renderers
+end note
+
+@enduml
