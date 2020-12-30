@@ -35,4 +35,4 @@ Has lifecycle methosd — e.g. `render()`
 
 ### Functional Components (the modern way)
 
-Do not have state unless you have use hooks
+Do not have state unless you have use [hooks](https://reactjs.org/docs/hooks-overview.html)
