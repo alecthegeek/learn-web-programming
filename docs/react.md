@@ -23,7 +23,9 @@ ReactDOM.render(
 
 In this example `App` is the top level component, i.e. a ts file called `App.tsx`
 
-React components have state, use a state manger (e.g. React Context API or Redux) for application level state
+Note: Always start component names with a capital letter.
+
+React components have no state, use the React Context API for application level state
 
 ### Class based components
 
